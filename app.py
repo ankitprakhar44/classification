@@ -1,4 +1,3 @@
-!pip install opencv-python
 import streamlit as st
 import tensorflow as tf
 from tensorflow import keras
@@ -14,7 +13,7 @@ st.write("""
          """
         )
 file = st.file_uploader("Please upload a flower image", type=["jpg","png"])
-import cv2
+from opencv-python import cv2
 from PIL import Image, ImageOps
 import numpy as np
 def import_and_predict(image_data, model):
