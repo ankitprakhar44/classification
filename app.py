@@ -12,7 +12,7 @@ st.write("""
          # Flower Classification
          """
         )
-file = st.file_uploader("Please upload a flower image", type=["jpg","png"])
+file = st.file_uploader("Please upload a flower image", type=["jpg","png","jpeg"])
 from PIL import Image, ImageOps
 import numpy as np
 def import_and_predict(image_data, model):
