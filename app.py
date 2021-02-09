@@ -9,7 +9,7 @@ def load_model():
     return model
 model=load_model()
 st.write("""
-         # Cymbidium Classification
+         # Cymbidium Orchid Classification
          """
         )
 file = st.file_uploader("Please upload a image of cymbidium Orchid", type=["jpg","png","jpeg"])
