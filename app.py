@@ -5,7 +5,7 @@ import tensorflow as tf
 st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache(allow_output_mutation=True)
 def load_model():
-    mmodel = tf.keras.models.load_model(tf.keras.utils.get_file('new_cymbidium_model_1.hdf5', origin='https://drive.google.com/u/0/uc?id=1GkVfMC4qrfgjvqVYxIJyzPwMS6_jlYz3&export=download'))
+    model = tf.keras.models.load_model(tf.keras.utils.get_file('new_cymbidium_model_1.hdf5', origin='https://drive.google.com/u/0/uc?id=1GkVfMC4qrfgjvqVYxIJyzPwMS6_jlYz3&export=download'))
     return model
 model=load_model()
 st.write("""
