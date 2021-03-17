@@ -12,7 +12,7 @@ st.write("""
          # Cymbidium Orchid Classification
          """
         )
-file = st.file_uploader("Please upload a image of Orchid", type=["jpg","png","jpeg"])
+file = st.file_uploader("Please upload an image of Cymbidium Orchid", type=["jpg","png","jpeg"])
 from PIL import Image, ImageOps
 import numpy as np
 def import_and_predict(image_data, model):
