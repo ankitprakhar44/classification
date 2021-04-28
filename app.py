@@ -33,10 +33,9 @@ else:
     st.image(image, use_column_width=True)
     predictions = import_and_predict(image, model)
     class_names=['Cymbidium acuminatum', 'Cymbidium aliciae', 'Cymbidium aloifolium', 'Cymbidium atropurpureum', 'Cymbidium banaense', 'Cymbidium bicolor', 'Cymbidium borneense', 'Cymbidium canaliculatum', 'Cymbidium changningense', 'Cymbidium chloranthum', 'Cymbidium cochleare', 'Cymbidium concinnum', 'Cymbidium crassifolium', 'Cymbidium cyperifolium', 'Cymbidium daweishanense', 'Cymbidium dayanum', 'Cymbidium defoliatum', 'Cymbidium devonianum', 'Cymbidium eburneum', 'Cymbidium elegans', 'Cymbidium elongatum', 'Cymbidium ensifolium', 'Cymbidium erythraeum', 'Cymbidium erythrostylum', 'Cymbidium faberi', 'Cymbidium finlaysonianum', 'Cymbidium floribundum', 'Cymbidium formosanum', 'Cymbidium gaoligongense', 'Cymbidium goeringii', 'Cymbidium haematodes', 'Cymbidium hartinahianum', 'Cymbidium hookerianum', 'Cymbidium insigne', 'Cymbidium iridioides', 'Cymbidium kanran', 'Cymbidium lancifolium', 'Cymbidium lowianum', 'Cymbidium macrorhizon', 'Cymbidium madidum', 'Cymbidium maguanense', 'Cymbidium mastersii', 'Cymbidium micranthum', 'Cymbidium munronianum', 'Cymbidium nanulum', 'Cymbidium omeiense', 'Cymbidium parishii', 'Cymbidium qiubeiense', 'Cymbidium rectum', 'Cymbidium repens', 'Cymbidium sanderae', 'Cymbidium schroederi', 'Cymbidium seidenfadenii', 'Cymbidium serratum', 'Cymbidium sichuanicum', 'Cymbidium sigmoideum', 'Cymbidium sinense', 'Cymbidium suave', 'Cymbidium suavissimum', 'Cymbidium tamphianum', 'Cymbidium tigrinum', 'Cymbidium tortisepalum', 'Cymbidium tracyanum', 'Cymbidium wadae', 'Cymbidium wenshanense', 'Cymbidium whiteae', 'Cymbidium wilsonii', 'Cymbidium × ballianum', 'Cymbidium × baoshanense', 'Cymbidium × dilatatiphyllum', 'Cymbidium × florinda', 'Cymbidium × gammieanum', 'Cymbidium × glebelandense', 'Cymbidium × hillii', 'Cymbidium × monanthum', 'Cymbidium × nishiuchianum', 'Cymbidium × nomachianum', 'Cymbidium × purpuratum', 'Cymbidium × rosefieldense', 'Cymbidium × woodlandense']
-    string1=str(np.argmax(predictions))
+    string1=str(max(predictions[0])*100)
     string="It is "+string1+"% likely that his image belongs to the specie: "+class_names[np.argmax(predictions)]
     st.success(string)
-    string2= max(predictions[0])*100
-    st.success(string2)
+    
     
     
