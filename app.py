@@ -36,7 +36,7 @@ else:
     string1=str(np.argmax(predictions))
     string="It is "+string1+"% likely that his image belongs to the specie: "+class_names[np.argmax(predictions)]
     st.success(string)
-    string2= predictions[0]
+    string2= predictions[0].sort()
     st.success(string2)
     
     
