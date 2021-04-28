@@ -23,7 +23,7 @@ def import_and_predict(image_data, model):
     img = np.asarray(image)
     img_reshape = img[np.newaxis,...]
     prediction = model.predict(img_reshape)
-    max_pred = max(prediction)
+    max_pred = prediction
 
     return prediction
 if file is None:
