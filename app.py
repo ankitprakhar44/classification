@@ -34,4 +34,4 @@ else:
     string="This image most likely belongs to the specie: "+class_names[np.argmax(predictions)]
     st.success(string)
     string2= predictions
-    st.success(strting2)
+    st.success(string2)
