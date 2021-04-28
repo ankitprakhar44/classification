@@ -16,13 +16,14 @@ file = st.file_uploader("Please upload an image of Cymbidium Orchid", type=["jpg
 from PIL import Image, ImageOps
 import numpy as np
 def import_and_predict(image_data, model):
-    global prediction
+    global max_pred
 
     size = (180,180)
     image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
     img = np.asarray(image)
     img_reshape = img[np.newaxis,...]
     prediction = model.predict(img_reshape)
+    max_pred = max(prediction)
 
     return prediction
 if file is None:
@@ -35,7 +36,7 @@ else:
     string1=str(np.argmax(predictions))
     string="It is "+string1+"% likely that his image belongs to the specie: "+class_names[np.argmax(predictions)]
     st.success(string)
-    string2= str(prediction) 
+    string2= max_pred
     st.success(string2)
     
     
