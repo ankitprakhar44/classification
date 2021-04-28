@@ -21,7 +21,7 @@ def import_and_predict(image_data, model):
     image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
     img = np.asarray(image)
     img_reshape = img[np.newaxis,...]
-    prediction = model.predict(img_reshape)
+    global prediction = model.predict(img_reshape)
 
     return prediction
 if file is None:
@@ -34,7 +34,7 @@ else:
     string1=str(np.argmax(predictions))
     string="It is "+string1+"% likely that his image belongs to the specie: "+class_names[np.argmax(predictions)]
     st.success(string)
-    string2= str(model.predict(image)) 
+    string2= str(prediction) 
     st.success(string2)
     
     
